@@ -85,6 +85,9 @@ jobs:
 
     needs: [test, lint]
 
+    permissions:
+      pull-requests: write
+
     steps:
       - name: Post comment
         uses: peter-evans/create-or-update-comment@v4
